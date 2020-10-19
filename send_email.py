@@ -1,8 +1,11 @@
 import smtplib
 import config
 encode= encode.encode('utf-8')
+
+# Function
 def send_email(sub, msg):
     try:
+        # SMTP Mail Server
         server = smtplib.SMTP('smtp.gmail.com:587')
         server.ehlo()
         server.starttls()
@@ -16,6 +19,7 @@ def send_email(sub, msg):
         print("Error Your email hasn't been sent.")
 
 subject = "Hello"
+# Msg for mail
 msg = "Hello from python auto mail bot!"
 
 send_email(subject, msg)
